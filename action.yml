@@ -10,12 +10,15 @@ inputs:
 runs:
   using: "composite"
   steps:
+    - name: 'get repo name'
+      run: echo "::set-output name=repo::$(echo ${{ inputs.repository-name }} | tr "/" "\n" | tail -1)"
+      shell: bash
     - name: 'install dependency'
       run: npm install github-label-template
       shell: bash
     - name: 'delete existing labels'
-      run: npx ghlbl -o eddiejaoude -r ${{ inputs.repository-name }} -t ${{ inputs.github-token }} -d
+      run: npx ghlbl -o eddiejaoude -r $REPO -t ${{ inputs.github-token }} -d
       shell: bash
     - name: 'import labels from json file'
-      run: npx ghlbl -o eddiejaoude -r ${{ inputs.repository-name }} -t ${{ inputs.github-token }} -i labels.json
+      run: npx ghlbl -o eddiejaoude -r $REPO -t ${{ inputs.github-token }} -i labels.json
       shell: bash
