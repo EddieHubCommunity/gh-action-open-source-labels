@@ -9,10 +9,10 @@ runs:
   steps:
     - name: 'install dependency'
       run: npm install github-label-template
-      shell: bash
+      shell: node
     - name: 'delete existing labels'
       run: npx ghlbl -o eddiejaoude -r stargate -t ${{ secrets.GITHUB_TOKEN }} -d
-      shell: bash
+      shell: node
     - name: 'import labels from json file'
       run: npx ghlbl -o eddiejaoude -r stargate -t ${{ secrets.GITHUB_TOKEN }} -i labels.json
-      shell: bash
+      shell: node
