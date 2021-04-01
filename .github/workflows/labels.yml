@@ -16,4 +16,4 @@ jobs:
     - uses: EddieHubCommunity/gh-action-open-source-labels@main
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        repository-name: $GITHUB_REPOSITORY
+        repository-name: 'gh-action-open-source-labels'

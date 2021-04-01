@@ -7,34 +7,15 @@ inputs:
   repository-name:
     description: 'GitHub repo name'
     required: true
-outputs:
-  repository:
-    description: "Repo name"
-    value: ${{ steps.repo-name.outputs.repo }}
 runs:
   using: "composite"
   steps:
-    - id: repo-name
-      run: echo "::set-output name=repo::$(echo ${{ inputs.repository-name }} | tr "/" "\n" | tail -1)"
-      shell: bash
     - name: 'install dependency'
       run: npm install github-label-template
       shell: bash
-    - name: 'test'
-      run: |
-        echo "LOG START -------------"
-        echo ${{ inputs.repository-name }}
-        echo ${{ inputs.repository-name }} | tr "/" "\n"
-        echo ${{ inputs.repository-name }} | tr "/" "\n" | tail -1
-        echo $repo
-        echo $repository
-        echo "LOG BREAK -------------"
-        npx ghlbl -o eddiejaoude -r `echo ${{ inputs.repository-name }} | tr "/" "\n" | tail -1` -t ${{ inputs.github-token }} -d
-        echo "LOG END -------------"
-      shell: bash
     - name: 'delete existing labels'
-      run: npx ghlbl -o eddiejaoude -r $repository -t ${{ inputs.github-token }} -d
+      run: npx ghlbl -o eddiejaoude -r ${{ inputs.repository-name }} -t ${{ inputs.github-token }} -d
       shell: bash
     - name: 'import labels from json file'
-      run: npx ghlbl -o eddiejaoude -r $repository -t ${{ inputs.github-token }} -i ${{ github.action_path }}/labels.json
+      run: npx ghlbl -o eddiejaoude -r ${{ inputs.repository-name }} -t ${{ inputs.github-token }} -i ${{ github.action_path }}/labels.json
       shell: bash
