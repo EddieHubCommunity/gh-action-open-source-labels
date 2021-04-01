@@ -1,0 +1,18 @@
+name: 'EddieHubCommunity labels Action'
+description: 'Import open source issue labels standards'
+inputs:
+  github-token:
+    description: 'GitHub token for repo'
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - name: 'install dependency'
+      run: npm install github-label-template
+      shell: bash
+    - name: 'delete existing labels'
+      run: npx ghlbl -o eddiejaoude -r stargate -t ${{ secrets.GITHUB_TOKEN }} -d
+      shell: bash
+    - name: 'import labels from json file'
+      run: npx ghlbl -o eddiejaoude -r stargate -t ${{ secrets.GITHUB_TOKEN }} -i labels.json
+      shell: bash
