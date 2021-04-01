@@ -22,11 +22,12 @@ runs:
         echo ${{ inputs.repository-name }}
         echo ${{ inputs.repository-name }} | tr "/" "\n"
         echo ${{ inputs.repository-name }} | tr "/" "\n" | tail -1
+        echo $repo
         echo "LOG END-------------"
       shell: bash
     - name: 'delete existing labels'
-      run: npx ghlbl -o eddiejaoude -r $REPO -t ${{ inputs.github-token }} -d
+      run: npx ghlbl -o eddiejaoude -r $repo -t ${{ inputs.github-token }} -d
       shell: bash
     - name: 'import labels from json file'
-      run: npx ghlbl -o eddiejaoude -r $REPO -t ${{ inputs.github-token }} -i ${{ github.action_path }}/labels.json
+      run: npx ghlbl -o eddiejaoude -r $repo -t ${{ inputs.github-token }} -i ${{ github.action_path }}/labels.json
       shell: bash
