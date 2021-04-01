@@ -29,7 +29,7 @@ runs:
         echo $repo
         echo $repository
         echo "LOG BREAK -------------"
-        npx ghlbl -o eddiejaoude -r `${{ inputs.repository-name }} | tr "/" "\n" | tail -1`` -t ${{ inputs.github-token }} -d
+        npx ghlbl -o eddiejaoude -r `${{ inputs.repository-name }} | tr "/" "\n" | tail -1` -t ${{ inputs.github-token }} -d
         echo "LOG END -------------"
       shell: bash
     - name: 'delete existing labels'
