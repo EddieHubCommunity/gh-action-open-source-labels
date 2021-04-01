@@ -18,6 +18,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14'
     - uses: EddieHubCommunity/gh-action-open-source-labels@main
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
