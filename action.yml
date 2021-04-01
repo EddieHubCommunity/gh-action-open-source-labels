@@ -19,9 +19,9 @@ runs:
     - name: 'test'
       run: |
         echo "LOG START -------------"
-        echo "${{ inputs.repository-name }}"
-        echo "${{ inputs.repository-name }} | tr "/" "\n""
-        echo "${{ inputs.repository-name }} | tr "/" "\n" | tail -1"
+        echo ${{ inputs.repository-name }}
+        echo ${{ inputs.repository-name }} | tr "/" "\n"
+        echo ${{ inputs.repository-name }} | tr "/" "\n" | tail -1
         echo "LOG END-------------"
       shell: bash
     - name: 'delete existing labels'
