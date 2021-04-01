@@ -17,7 +17,12 @@ runs:
       run: npm install github-label-template
       shell: bash
     - name: 'test'
-      run: echo "LOG ------------- $REPO"
+      run: |
+        echo "LOG START -------------"
+        echo "${{ inputs.repository-name }}"
+        echo "${{ inputs.repository-name }} | tr "/" "\n""
+        echo "${{ inputs.repository-name }} | tr "/" "\n" | tail -1"
+        echo "LOG END-------------"
       shell: bash
     - name: 'delete existing labels'
       run: npx ghlbl -o eddiejaoude -r $REPO -t ${{ inputs.github-token }} -d
