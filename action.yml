@@ -11,8 +11,8 @@ runs:
       run: npm install github-label-template
       shell: node
     - name: 'delete existing labels'
-      run: npx ghlbl -o eddiejaoude -r stargate -t ${{ secrets.GITHUB_TOKEN }} -d
+      run: npx ghlbl -o eddiejaoude -r stargate -t ${{ inputs.github-token }} -d
       shell: node
     - name: 'import labels from json file'
-      run: npx ghlbl -o eddiejaoude -r stargate -t ${{ secrets.GITHUB_TOKEN }} -i labels.json
+      run: npx ghlbl -o eddiejaoude -r stargate -t ${{ inputs.github-token }} -i labels.json
       shell: node
