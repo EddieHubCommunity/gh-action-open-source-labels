@@ -1,0 +1,19 @@
+{
+  "name": "gh-action-open-source-labels",
+  "version": "0.1.1",
+  "description": "GitHub Action to create open source standards labels",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EddieHubCommunity/gh-action-open-source-labels.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EddieHubCommunity/gh-action-open-source-labels/issues"
+  },
+  "homepage": "https://github.com/EddieHubCommunity/gh-action-open-source-labels#readme"
+}
