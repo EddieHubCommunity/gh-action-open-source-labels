@@ -8,6 +8,10 @@
     "color": "7f0799"
   },
   {
+    "name": "duplicate",
+    "color": "7f0799"
+  },
+  {
     "name": "⛔️ status: discarded",
     "color": "eeeeee"
   },
