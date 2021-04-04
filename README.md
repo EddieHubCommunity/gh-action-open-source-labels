@@ -1,4 +1,4 @@
-# Community Template Repo
+# Open Source issue labels generator
 
 Template repo with docs and GitHub Actions etc, to create other projects.
 
