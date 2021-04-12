@@ -25,8 +25,8 @@ jobs:
     - uses: EddieHubCommunity/gh-action-open-source-labels@main
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-       owner-name: ${{ github.repository_owner }}
-       repository-name: ${{ github.event.repository.name }}
+        owner-name: ${{ github.repository_owner }}
+        repository-name: ${{ github.event.repository.name }}
 ```
 
 ## Label standards
