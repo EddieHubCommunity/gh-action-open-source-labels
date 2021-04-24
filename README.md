@@ -54,7 +54,11 @@ To add a new label, update the `labels.json` file and the GitHub Action will do 
     {
         "name": "help wanted",
         "color": "7f0799"
-    }
+    },
+    {
+        "name": "💬 talk: discussion",
+        "color": "f9bbe5"
+    } 
 ]
 ```
 ## Link to Our Discord Channel:
