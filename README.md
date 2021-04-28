@@ -52,11 +52,14 @@ To add a new label, update the `labels.json` file and the GitHub Action will do 
         "color": "7f0799"
     },
     {
-        "name": "help wanted",
-        "color": "7f0799"
-    }
+        "name": "💬 talk: discussion",
+        "color": "f9bbe5"
+    } 
 ]
 ```
+
+> This example shows two common ways to add a label. One without emoji and the other with emoji. Preferred way is the one with emoji at the beginning but there are also some labels which are commonly used without emojis.
+
 ## Link to Our Discord Channel:
 
 [Join EddieHub!](https://discord.gg/Hb5C9KvDKq)
