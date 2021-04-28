@@ -62,4 +62,4 @@ To add a new label, update the `labels.json` file and the GitHub Action will do 
 
 ## Link to Our Discord Channel:
 
-[Join EddieHub!](https://discord.gg/Hb5C9KvDKq)
+[Join EddieHub!](http://discord.eddiehub.org)
