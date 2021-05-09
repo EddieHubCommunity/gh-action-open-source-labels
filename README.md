@@ -6,6 +6,8 @@ Template repo with docs and GitHub Actions etc, to create other projects.
 
 ## Usage
 
+To use this Action, you only need the yaml file below.
+
 ```yaml
 name: Import open source standard labels
 
@@ -41,9 +43,9 @@ jobs:
 
 Using the label convention from https://opensource.creativecommons.org/contributing-code/repo-labels/
 
-## How to update the labels
+## Contributing to this project
 
-To add a new label, update the `labels.json` file and the GitHub Action will do the rest.
+To add a new label, update the `labels.json` file and the GitHub Action will do the rest for everyone!
 
 ```json
 [
