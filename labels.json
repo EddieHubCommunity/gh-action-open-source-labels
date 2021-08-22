@@ -89,11 +89,11 @@
   },
   {
     "name": "🙅 status: discontinued",
-    "color": "666666"
+    "color": "0033CC"
   },
   {
     "name": "🏷 status: label work required",
-    "color": "#F4EE00"
+    "color": "F4EE00"
   },
   {
     "name": "🔢 points: 1",
