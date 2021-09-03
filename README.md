@@ -1,6 +1,6 @@
 # Open Source issue labels generator
 
-Template repo with docs and GitHub Actions etc, to create other projects.
+A GitHub action that generates the labels you want (customizable name and color) in any repository, easy and efficient.
 
 ![screenshot](https://user-images.githubusercontent.com/624760/113267767-9e331c00-92ce-11eb-8e47-efb02d3c7fa2.png)
 
@@ -60,8 +60,9 @@ To add a new label, update the `labels.json` file and the GitHub Action will do 
 ]
 ```
 
-> This example shows two common ways to add a label. One without emoji and the other with emoji. Preferred way is the one with emoji at the beginning but there are also some labels which are commonly used without emojis.
+> This example shows two common ways to add a label. One without emoji and the other with emoji. The preferred way is using emojis at the beginning, but there are also some labels which are commonly used without emojis.
 
-## Link to Our Discord Channel:
+## Socials
 
-[Join EddieHub!](http://discord.eddiehub.org)
+Join our Discord community [here](http://discord.eddiehub.org)   
+Subscribe our YouTube channel [here](https://www.youtube.com/user/eddiejaoude)
