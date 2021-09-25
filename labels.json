@@ -122,5 +122,9 @@
   {
     "name": "no-issue-activity",
     "color": "ededed"
+  },
+  {
+    "name": "dependencies",
+    "color": "0366d6"
   }
 ]
