@@ -1,0 +1,38 @@
+name: Feature Request
+description: Request a feature that enhances the project
+title: '[FEATURE] <description>'
+labels: ["✨ goal: improvement"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description of the feature
+      description: A brief description of the feature, and why is it necessary
+    validations:
+      required: true
+  - type: input
+    id: priority
+    attributes:
+      label: Priority
+      description: How important / urgent is this feature?
+    validations:
+      required: false
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Provide screenshots if applicable
+    validations:
+      required: false
+  - type: textarea
+    id: extrainfo
+    attributes:
+      label: Additional context
+      description: Add any other context about the problem here.
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        You can also join the Discord community [here](http://discord.eddiehub.org)
+        Feel free to check out other cool repositories of the EddieHub Community [here](https://github.com/EddieHubCommunity)
