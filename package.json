@@ -1,6 +1,6 @@
 {
   "name": "gh-action-open-source-labels",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "GitHub Action to create open source standards labels",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
