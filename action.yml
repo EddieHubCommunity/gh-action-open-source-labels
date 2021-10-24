@@ -20,8 +20,7 @@ runs:
       run: npm install github-label-template
       shell: bash
     - name: 'delete existing labels'
-      if: ${{ <expression> }}
-      run: npx ghlbl -o ${{ inputs.owner-name }} -r ${{ inputs.repository-name }} -t ${{ inputs.github-token }} -d
+      run: [[ "${{ inputs.force }}" = true ]] && npx ghlbl -o ${{ inputs.owner-name }} -r ${{ inputs.repository-name }} -t ${{ inputs.github-token }} -d
       shell: bash
     - name: 'import labels from json file'
       run: npx ghlbl -o ${{ inputs.owner-name }} -r ${{ inputs.repository-name }} -t ${{ inputs.github-token }} -i ${{ github.action_path }}/labels.json
