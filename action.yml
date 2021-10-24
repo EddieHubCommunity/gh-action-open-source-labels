@@ -22,6 +22,12 @@ runs:
     - name: 'delete existing labels'
       run: |
         [[ ${{ inputs.force }} = true ]] && npx ghlbl -o ${{ inputs.owner-name }} -r ${{ inputs.repository-name }} -t ${{ inputs.github-token }} -d
+        if [ -z "${{ inputs.force }}" ]
+        then
+          npx ghlbl -o ${{ inputs.owner-name }} -r ${{ inputs.repository-name }} -t ${{ inputs.github-token }} -d
+        else
+          echo -e "Existing labels not removed"
+        fi
       shell: bash
     - name: 'import labels from json file'
       run: npx ghlbl -o ${{ inputs.owner-name }} -r ${{ inputs.repository-name }} -t ${{ inputs.github-token }} -i ${{ github.action_path }}/labels.json
